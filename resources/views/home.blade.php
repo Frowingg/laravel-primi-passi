@@ -10,11 +10,25 @@
         <link href="https://fonts.googleapis.com/css?family=Nunito:200,600" rel="stylesheet">
     </head>
     <body>
+        <header>
+
+            <a href="{{ route('about') }}"> Vai a about </a>
+
+            <a href="{{ route('info') }}"> Vai a info </a>
+
+            <a href="{{ route('help') }}"> Vai a help </a>
+
+        </header>
+
+
         <h1> Hello world! </h1>
 
-        @foreach($students as $student)            
-            <h2> {{ $student }} </h2>
-        @endforeach
+        <h2 style="color:red">MOVIES:</h2>
+        <ul>
+            @foreach($movies as $movie)  
+                <li> {{ $movie }} </li>
+            @endforeach
+        </ul>
         
      
 

@@ -16,21 +16,21 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
 
     $data = [
-        'students' => ['Franco', 'Alessia', 'Maria'],
-        // 'drama' => [ 
-        //     'title' => 'a',
-        //     'year' => 'aa',
-        // ],
-        // 'comedy' => [ 
-        //     'title' => 'b',
-        //     'year' => 'bb',
-        // ],
-        // 'action' => [ 
-        //     'title' => 'c',
-        //     'year' => 'cc',
-        // ],
+        'movies' => ['Minions 2',  'Thor: Love and Thunder', 'Lightyear - La vera storia di Buzz'],
     ];
 
     return view('home', $data);
 
 })->name('home');;
+
+Route::get('/about', function () {
+    return view('about');
+})->name('about');
+
+Route::get('/help', function () {
+    return view('help');
+})->name('help');
+
+Route::get('/info', function () {
+    return view('info');
+})->name('info');
